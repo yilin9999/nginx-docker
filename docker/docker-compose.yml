@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    restart: always
+    image: nginx
+    container_name: nginx-docker
+    ports:
+      - 8080:80
+        #      - 443:443
+    # restart: always
+    volumes:
+      - "./nginx/conf.d:/etc/nginx/conf.d"
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - "./letsencrypt:/etc/letsencrypt"
+      - "./html:/usr/share/nginx/html"
+      # - "./var/log/nginx:/var/log/nginx"
