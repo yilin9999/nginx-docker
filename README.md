@@ -20,6 +20,8 @@ docker
 ├── nginx
 │   ├── conf.d
 │   │   └── default.conf
+│   ├── sited-enabled  # add server config in this directory
+│   │   └── uwsgi.conf
 │   └── nginx.conf
 └── nginx.conf
 ```
